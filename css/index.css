@@ -1,0 +1,164 @@
+/* Generals */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #64676d;
+}
+
+/* App */
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Main window */
+.main-window {
+    flex-grow: 1;
+    display: flex;
+}
+
+/* 
+  ____  _     _          _ _                
+ / ___|(_) __| | ___  __| | |__   __ _ _ __ 
+ \___ \| |/ _` |/ _ \/ _` | '_ \ / _` | '__|
+  ___) | | (_| |  __/ (_| | |_) | (_| | |   
+ |____/|_|\__,_|\___|\__,_|_.__/ \__,_|_|   
+                                             
+*/
+.sidebar {
+    /* larghezza sidebar */
+    flex-basis: 230px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.sidebar-top {
+    /* tutto lo spazio eccetto
+    sidebar-bottom */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 150px;
+    margin: 15px auto;
+}
+
+.side-menu {
+    list-style: none;
+}
+
+.side-menu li {
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+.side-menu li img {
+    width: 20px;
+}
+
+.side-menu li a {
+    text-decoration: none;
+    color: #64676d;
+}
+
+.playlist-menu {
+    margin-top: 30px;
+}
+
+.playlist-menu li:first-child {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.sidebar-bottom {
+    /* dimensioni dal contenuto */
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 30px;
+}
+
+.sidebar-bottom .install {
+    border-bottom: 1px solid #64676d;
+}
+
+.sidebar-bottom .account-name {
+    color: #fff;
+    font-weight: 700;
+}
+
+.sidebar-bottom .account-name img {
+    width: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* 
+   ____            _             _   
+  / ___|___  _ __ | |_ ___ _ __ | |_ 
+ | |   / _ \| '_ \| __/ _ \ '_ \| __|
+ | |__| (_) | | | | ||  __/ | | | |_ 
+  \____\___/|_| |_|\__\___|_| |_|\__|
+                                      
+*/
+.content {
+    /* tutto lo spazio eccetto
+    player */
+    position: relative;
+    flex-grow: 1;
+    background-color: #141921;
+}
+
+.content-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    /* TODO: CHANGE COLOR */
+    background: rgba(44, 161, 216, 0.5);
+    z-index: 9;
+}
+
+.content-scrollable {
+    /* 90px da content-top-bar height */
+    padding: 90px 15px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.content-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+}
+
+/* 
+  ____        _   _                          _                        
+ | __ )  ___ | |_| |_ ___  _ __ ___    _ __ | | __ _ _   _  ___ _ __  
+ |  _ \ / _ \| __| __/ _ \| '_ ` _ \  | '_ \| |/ _` | | | |/ _ \ '__| 
+ | |_) | (_) | |_| || (_) | | | | | | | |_) | | (_| | |_| |  __/ |    
+ |____/ \___/ \__|\__\___/|_| |_| |_| | .__/|_|\__,_|\__, |\___|_|    
+                                      |_|            |___/            
+*/
+.player {
+    /* dimensioni dal contenuto */
+    /* TODO: REMOVE */
+    background-color: brown;
+}
