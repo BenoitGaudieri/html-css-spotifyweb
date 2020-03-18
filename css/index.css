@@ -147,7 +147,7 @@ body {
 
 .card {
     margin: 10px;
-    flex-basis: (20% - 10px);
+    flex-basis: calc(20% - 20px);
 }
 
 /* 
