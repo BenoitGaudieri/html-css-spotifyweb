@@ -262,12 +262,44 @@ body {
     font-size: 11px;
 }
 
+.player-center {
+    text-align: center;
+}
+
 .player-actions {
     margin-left: 30px;
 }
 
 .player-actions i {
     margin-right: 5px;
+}
+
+.player-controls i {
+    font-size: 18px;
+    color: #fff;
+    margin: 5px 25px 10px 0;
+}
+
+.player-controls .player_play--large {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.player-progress-bar {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+}
+
+.progress-bar::after {
+    content: "";
+    width: 500px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: middle;
 }
 
 /* 
@@ -285,7 +317,7 @@ body {
     }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 645px) {
     /* Sidebar dimension */
     .sidebar {
         flex-basis: 70px;
