@@ -61,7 +61,11 @@ body {
 
 .logo {
     width: 150px;
-    margin: 15px auto;
+    height: 60px;
+    margin: 10px 20px;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 .side-menu {
@@ -71,10 +75,13 @@ body {
 .side-menu li {
     line-height: 30px;
     margin-left: 20px;
+    font-size: 13px;
 }
 
 .side-menu li img {
-    width: 20px;
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 6px;
 }
 
 .side-menu li a {
@@ -155,22 +162,29 @@ body {
 .content-cards {
     display: flex;
     flex-wrap: wrap;
-    /* height: 500px; */
+    /* width: 1600px;
+    max-width: 100%;
+    height: 400px; */
 }
 
 .card {
-    margin: 10px;
-    flex-basis: calc(20% - 20px);
-    /* position: relative; */
+    padding: 10px;
+    margin: 30px 0;
+    flex-basis: calc(100% / 6);
+    position: relative;
 }
 
-/* .card img {
+.card img {
+    width: 100%;
+    height: 100%;
+}
+/* 
+.card img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 } */
 
 /* 
@@ -219,4 +233,47 @@ body {
 
 .player-actions i {
     margin-right: 5px;
+}
+
+/* 
+  __  __          _ _          ___                         
+ |  \/  | ___  __| (_) __ _   / _ \ _   _  ___ _ __ _   _  
+ | |\/| |/ _ \/ _` | |/ _` | | | | | | | |/ _ \ '__| | | | 
+ | |  | |  __/ (_| | | (_| | | |_| | |_| |  __/ |  | |_| | 
+ |_|  |_|\___|\__,_|_|\__,_|  \__\_\\__,_|\___|_|   \__, | 
+                                                    |___/  
+*/
+@media all and (max-width: 1024px) {
+    /* Number of album cards displayed */
+    .card {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* Sidebar dimension */
+    .sidebar {
+        flex-basis: 70px;
+    }
+
+    /* Sidebar span removal */
+    .side-menu span,
+    .sidebar-bottom span {
+        display: none;
+    }
+
+    .sidebar-bottom .install {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/logo-small.svg);
+    }
+
+    /* Number of album cards displayed */
+    .card {
+        flex-basis: calc(100% / 2);
+    }
 }
