@@ -116,9 +116,11 @@ body {
 }
 
 .sidebar-bottom .account-name img {
-    width: 20px;
-    background-color: #ccc;
+    width: 25px;
+    background-color: #a0a0a0;
     border-radius: 50%;
+    vertical-align: middle;
+    margin: 10px 5px 5px 0;
 }
 
 /* 
