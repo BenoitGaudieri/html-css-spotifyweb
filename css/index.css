@@ -347,11 +347,11 @@ body {
     /* display: inline-block; */
     margin: 0 20px;
     /* vertical-align: middle; */
-    flex-basis: 800px;
+    flex-basis: 500px;
 }
 
 .player-right {
-    flex-basis: 100px;
+    flex-basis: 300px;
 }
 
 /* TODO: REFACTOR i */
@@ -359,6 +359,11 @@ body {
     /* display: inline-block; */
     display: flex;
     align-items: center;
+}
+
+.player-volume i {
+    margin: 0 0 0 8px;
+    color: #fff;
 }
 
 .progress-bar.progress-bar__right {
