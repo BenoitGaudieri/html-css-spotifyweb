@@ -227,21 +227,41 @@ body {
 .card {
     padding: 7px;
     flex-basis: calc(100% / 6);
-    position: relative;
 }
 
 .card img {
     max-width: 100%;
     max-height: 100%;
+    position: relative;
 }
-/* 
-.card img {
+
+.card__overlay {
+    position: relative;
+    width: 100%;
+}
+
+.card__overlay--hidden {
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-} */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.category-popular .card__overlay--hidden {
+    border-radius: 50%;
+}
+
+.card__overlay--hidden:hover {
+    opacity: 1;
+}
 
 .card-text {
     text-align: center;
@@ -339,15 +359,27 @@ body {
 }
 
 .progress-bar {
+    position: relative;
     content: "";
     /* width: 500px; */
     height: 4px;
     border-radius: 5px;
-    background-color: #ccc;
+    background-color: #535353;
     /* display: inline-block; */
     margin: 0 20px;
     /* vertical-align: middle; */
     flex-basis: 500px;
+    position: relative;
+}
+
+.progress-bar::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 4px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    width: 20%;
 }
 
 .player-right {
@@ -364,10 +396,6 @@ body {
 .player-volume i {
     margin: 0 0 0 8px;
     color: #fff;
-}
-
-.progress-bar.progress-bar__right {
-    /* width: 100px; */
 }
 
 /* 
