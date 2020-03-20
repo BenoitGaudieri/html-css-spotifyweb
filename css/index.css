@@ -300,6 +300,7 @@ body {
 
 .player-center {
     text-align: center;
+    flex-grow: 1;
 }
 
 .player-actions {
@@ -311,6 +312,12 @@ body {
 }
 
 /* TODO: REFACTOR i utility*/
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .player-controls i {
     font-size: 16px;
     color: #fff;
@@ -323,29 +330,39 @@ body {
 }
 
 .player-progress-bar {
-    display: inline-block;
+    /* display: inline-block; */
     color: #fff;
     font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress-bar {
     content: "";
-    width: 500px;
+    /* width: 500px; */
     height: 4px;
     border-radius: 5px;
     background-color: #ccc;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 20px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    flex-basis: 800px;
+}
+
+.player-right {
+    flex-basis: 100px;
 }
 
 /* TODO: REFACTOR i */
 .player-volume {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
 }
 
 .progress-bar.progress-bar__right {
-    width: 100px;
+    /* width: 100px; */
 }
 
 /* 
