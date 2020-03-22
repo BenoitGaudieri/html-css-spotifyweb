@@ -35,6 +35,19 @@ body {
     display: inline-block;
 }
 
+.p--text-center {
+    text-align: center;
+}
+
+.p--flex {
+    display: flex;
+}
+
+.p__text--title {
+    color: #fff;
+    font-weight: 700;
+}
+
 /* 
   ____  _     _          _ _                
  / ___|(_) __| | ___  __| | |__   __ _ _ __ 
@@ -46,16 +59,16 @@ body {
 .sidebar {
     /* larghezza sidebar */
     flex-basis: 230px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     background-color: #000;
 }
 
-.sidebar-top {
+.sidebar__top {
     /* tutto lo spazio eccetto
     sidebar-bottom */
     flex-grow: 1;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
 }
 
@@ -68,54 +81,54 @@ body {
     background-position: left;
 }
 
-.side-menu {
+.side__menu {
     list-style: none;
 }
 
-.side-menu li {
+.side__menu li {
     line-height: 30px;
     margin-left: 20px;
     font-size: 13px;
 }
 
-.side-menu li img {
+.side__menu li img {
     width: 30px;
     vertical-align: middle;
     margin-right: 6px;
 }
 
-.side-menu li a {
+.side__menu li a {
     text-decoration: none;
     color: #64676d;
 }
 
-.playlist-menu {
+.playlist__menu {
     margin-top: 30px;
 }
 
-.playlist-menu li:first-child {
+.playlist__menu li:first-child {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
 }
 
-.sidebar-bottom {
+.sidebar__bottom {
     /* dimensioni dal contenuto */
     margin-left: 20px;
     margin-right: 20px;
     line-height: 30px;
 }
 
-.sidebar-bottom .install {
+.sidebar__bottom .install {
     border-bottom: 1px solid #64676d;
 }
 
-.sidebar-bottom .account-name {
+/* .sidebar__bottom .account-name {
     color: #fff;
     font-weight: 700;
-}
+} */
 
-.sidebar-bottom .account-name img {
+.sidebar__bottom .account-name img {
     width: 25px;
     background-color: #a0a0a0;
     border-radius: 50%;
@@ -350,7 +363,6 @@ body {
 }
 
 .player-progress-bar {
-    /* display: inline-block; */
     color: #fff;
     font-size: 11px;
     display: flex;
@@ -361,13 +373,10 @@ body {
 .progress-bar {
     position: relative;
     content: "";
-    /* width: 500px; */
     height: 4px;
     border-radius: 5px;
     background-color: #535353;
-    /* display: inline-block; */
     margin: 0 20px;
-    /* vertical-align: middle; */
     flex-basis: 500px;
     position: relative;
 }
@@ -430,18 +439,30 @@ body {
 }
 
 @media all and (max-width: 645px) {
+    .player-left {
+        margin-right: 20px;
+    }
+
+    .player-actions {
+        margin-left: 0;
+    }
+
+    .player-right {
+        margin-left: 20px;
+    }
+
     /* Sidebar dimension */
     .sidebar {
         flex-basis: 70px;
     }
 
     /* Sidebar span removal */
-    .side-menu span,
-    .sidebar-bottom span {
+    .side__menu span,
+    .sidebar__bottom span {
         display: none;
     }
 
-    .sidebar-bottom .install {
+    .sidebar__bottom .install {
         border-bottom: none;
     }
 
