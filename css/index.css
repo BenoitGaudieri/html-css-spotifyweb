@@ -12,7 +12,7 @@ body {
 
 /* App */
 #app {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     height: 100vh;
 }
@@ -20,7 +20,7 @@ body {
 /* Main window */
 .main-window {
     flex-grow: 1;
-    display: flex;
+    /* display: flex; */
 }
 
 /* 
@@ -46,7 +46,7 @@ body {
 /* Typography */
 .p__text--title,
 .p__text--title-card .card .card-text h4,
-.p__text--title-card .category-text h2 {
+.p__text--title-card .category--text h2 {
     color: #fff;
     font-weight: 700;
 }
@@ -224,25 +224,25 @@ body {
     text-decoration: none;
 } */
 
-.content-category {
+.content__category {
     margin: 10px 0;
 }
 
-.category-text {
+.category--text {
     padding: 7px;
 }
 
-.category-text h2 {
+.category--text h2 {
     /* color: #fff; */
     margin-bottom: 10px;
 }
 
-.category-text span {
+.category--text span {
     font-size: 12px;
 }
 
-.content-cards {
-    display: flex;
+.content__cards {
+    /* display: flex; */
     flex-wrap: wrap;
     margin: 20px 0;
     /* width: 1600px;
@@ -275,7 +275,7 @@ body {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     color: #000;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     font-size: 60px;
@@ -315,14 +315,14 @@ body {
 .player {
     /* dimensioni dal contenuto */
     background-color: #272727;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
 .player-left {
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -359,7 +359,7 @@ body {
 
 /* TODO: REFACTOR i utility*/
 .player-controls {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -378,7 +378,7 @@ body {
 .player-progress-bar {
     color: #fff;
     font-size: 11px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -427,7 +427,7 @@ body {
 /* TODO: REFACTOR i */
 .player-volume {
     /* display: inline-block; */
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
